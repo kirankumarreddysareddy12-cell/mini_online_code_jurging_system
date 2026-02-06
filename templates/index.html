@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Code Judge</title>
+</head>
+<body>
+
+<h2>Mini Online Code Judge</h2>
+
+<!-- Problem selection -->
+<label>Select Problem:</label>
+<select id="problem">
+{% for key, p in problems.items() %}
+    <option value="{{key}}">{{p.title}}</option>
+{% endfor %}
+</select>
+
+<br><br>
+
+<!-- Code editor -->
+<label>Write your Python code:</label><br>
+<textarea id="code" rows="12" cols="70">
+# Write your Python solution here
+</textarea>
+
+<br><br>
+
+<!-- Custom input box -->
+<label>Custom Input (optional):</label><br>
+<textarea id="customInput" rows="4" cols="70">
+</textarea>
+
+<br><br>
+
+<!-- Run button -->
+<button onclick="runCode()">Run Code</button>
+
+<br><br>
+
+<!-- Output display -->
+<h4>Output:</h4>
+<pre id="output"></pre>
+
+<!-- Script -->
+<script src="/static/script.js"></script>
+
+</body>
+</html>
